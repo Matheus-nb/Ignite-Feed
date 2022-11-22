@@ -1,6 +1,6 @@
 import { Header } from './components/Header';
 import { Post } from './components/Post';
-import { Sidebar } from './components/SideBar';
+import { Sidebar } from './components/Sidebar';
 
 import './global.css'
 import styles from './App.module.css'
@@ -66,7 +66,8 @@ export function App() {
         <main>
           {posts.map(post => {
             return (
-              <Post 
+              <Post
+                key={post.id} 
                 author={post.author}
                 content={post.content}
                 publishedAt={post.publishedAt}
